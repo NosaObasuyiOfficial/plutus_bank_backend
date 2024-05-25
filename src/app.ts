@@ -31,7 +31,6 @@ app.get("/", (req, res) => {
   return res.send("Hello World!");
 });
 
-
 db.sync()
   .then(() => {
     console.log("Database is connected");

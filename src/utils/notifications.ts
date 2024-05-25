@@ -35,6 +35,7 @@ export const sendmail = async(from:string, to:string, subject:string, html:strin
         console.log(err)
     }
 }
+
 export const sendmailForInvestment = async(from:string, to:string, subject:string, html:string)=>{
     try{
         const reponse = await transporter.sendMail({

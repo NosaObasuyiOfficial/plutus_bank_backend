@@ -5,7 +5,6 @@ import { hashedPassword, tokenGenerator} from "../../utils/auth";
 import { genAccount } from "../../utils/auth";
 import { generateOTP } from "../../utils/auth";
 import { emailHtml, sendmail } from "../../utils/notifications";
-import jwt, { JwtPayload } from "jsonwebtoken";
 import dotenv from "dotenv";
 import Joi from "joi";
 import bcrypt from "bcrypt";
@@ -81,6 +80,7 @@ export const userSignup = async ( req: Request, res: Response, next: NextFunctio
         data: newUser,
         user_token: token,
         
+        
 
       });
     }
@@ -141,7 +141,6 @@ export const verifyUser = async (
     });
   }
 };
-
 
 //Controller for logging-in user
 export const loginUser = async (
